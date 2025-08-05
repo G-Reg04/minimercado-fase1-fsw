@@ -16,15 +16,19 @@ O objetivo é estruturar o conteúdo (head, navegação, catálogo de produtos, 
 > **Observação:** Todo o código é puramente HTML semântico, respeitando boas práticas de acessibilidade e SEO básico.
 
 ## Estrutura de pastas
-├── index.html # Página inicial + catálogo
-├── frutas.html # Subcatálogo frutas & verduras
-├── nao-pereciveis.html # Subcatálogo alimentos não-perecíveis
-├── higiene.html # Subcatálogo higiene & limpeza
-├── serviços.html # Página de serviços
+```
+📁 minimercado-greger/
+├── index.html              # Página inicial + catálogo
+├── frutas.html             # Subcatálogo frutas & verduras
+├── nao-pereciveis.html     # Subcatálogo alimentos não-perecíveis
+├── higiene.html            # Subcatálogo higiene & limpeza
+├── servicos.html           # Página de serviços
 └── assets/
-├── img/ # Imagens de produtos
-└── docs/ # (Opcional) PDF da fase 1
+    └── img/                # Imagens de produtos
+        ├── frutas/
+        ├── nao-pereciveis/
+        └── higiene/
+```
 
 ## Licença
 Uso acadêmico — consulte a disciplina para detalhes de copyright.
-
