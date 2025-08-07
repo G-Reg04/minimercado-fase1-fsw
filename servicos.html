@@ -3,34 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <title>MiniMercado Greger — Serviços</title>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <center><h1>MiniMercado Greger - Serviços</h1></center>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="frutas.html">Frutas & Verduras</a></li>
-        <li><a href="nao-pereciveis.html">Alimentos Não-Perecíveis</a></li>
-        <li><a href="higiene.html">Higiene & Limpeza</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-      </ul>
-    </nav>
-    <hr>
-  </header>
+ <!-- ===== Header ===== -->
+<!-- a) Faixa de fundo usando <table> (bgcolor) -->
+<table width="100%" bgcolor="#d9e7ff" cellpadding="8">
+  <tr>
+    <!-- b) Logo ou título -->
+    <td width="30%" align="left">
+      <h1 style="margin:0;">MiniMercado Greger</h1>
+    </td>
+
+    <!-- c) Menu horizontal em células individuais -->
+    <td align="right">
+      <nav>
+        <a href="index.html">Início</a> |
+        <a href="frutas.html">Frutas &amp; Verduras</a> |
+        <a href="nao-pereciveis.html">Não-Perecíveis</a> |
+        <a href="higiene.html">Higiene &amp; Limpeza</a> |
+        <a href="servicos.html">Serviços</a>
+      </nav>
+    </td>
+  </tr>
+</table>
+
+<hr size="3" noshade>
 
   <!-- ===== Conteúdo principal ===== -->
   <main>
     <section>
-      <h2>Serviços</h2>
+      <h2 align="center">Serviços</h2>
       <article>
         <h3>Retirada no local — <strong>Grátis</strong></h3>
         <p>Compre online e retire em até 2 h no balcão de atendimento.</p>
       </article>
-
+      <hr size="0.5" noshade>
       <article>
         <h3>Tele-entrega — R$ 9,90</h3>
         <p>Entregamos em até 2 h para bairros centrais de Campinas.</p>
@@ -40,10 +50,20 @@
 
   <!-- ===== Rodapé ===== -->
   <footer>
-    <hr>
-    <p>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</p>
-    <p>Contato: <a href="mailto:contato@minimercadogreger.com"
-      title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a></p>
+    <hr size="3" noshade>
+  <table width="100%" bgcolor="#d9e7ff" cellpadding="8">
+    <tr>
+    <td align="center">
+      <address>
+        Contato: <a href="mailto:contato@minimercadogreger.com"
+        title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a><br>
+        Rua Exemplo, 123 – Campinas-SP
+      </address>
+      <small>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</small>
+    </td>
+  </tr>
+</table>
+
   </footer>
 
 </body>

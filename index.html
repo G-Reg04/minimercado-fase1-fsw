@@ -4,119 +4,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <title>MiniMercado Greger — Página Inicial</title>
 </head>
 
 <body>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <center><h1>MiniMercado Greger</h1><center>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="frutas.html">Frutas & Verduras</a></li>
-        <li><a href="nao-pereciveis.html">Alimentos Não-Perecíveis</a></li>
-        <li><a href="higiene.html">Higiene & Limpeza</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-      </ul>
-    </nav>
-    <hr>
-    <br>
-  </header>
+ <!-- ===== Header ===== -->
+<!-- a) Faixa de fundo usando <table> (bgcolor) -->
+<table width="100%" bgcolor="#d9e7ff" cellpadding="8">
+  <tr>
+    <!-- b) Logo ou título -->
+    <td width="30%" align="left">
+      <h1 style="margin:0;">MiniMercado Greger</h1>
+    </td>
+
+    <!-- c) Menu horizontal em células individuais -->
+    <td align="right">
+      <nav>
+        <a href="index.html">Início</a> |
+        <a href="frutas.html">Frutas &amp; Verduras</a> |
+        <a href="nao-pereciveis.html">Não-Perecíveis</a> |
+        <a href="higiene.html">Higiene &amp; Limpeza</a> |
+        <a href="servicos.html">Serviços</a>
+      </nav>
+    </td>
+  </tr>
+</table>
+
+<hr size="3" noshade>
+
 
   <!-- ===== Conteúdo principal ===== -->
   <main>
 
     <!-- ——— Frutas & Verduras ——— -->
     <section>
-      <center><h2>Frutas & Verduras</h2></center>
+      <h2 align="center">Frutas &amp; Verduras</h2>
 
-      <article>
-        <h3>Atemoia 500g — R$ 12,45</h3>
-        <img src="assets/img/frutas/atemioa.png" alt="Atemoia fresca" width="200">
-        <p>Fruta híbrida de polpa doce e cremosa — ótima para sucos e sobremesas.</p>
-      </article>
-
-      <article>
-        <h3>Kiwi Gold 600g — R$ 32,70</h3>
-        <img src="assets/img/frutas/kiwi-gold.png" alt="Kiwi Gold cortado ao meio" width="200">
-        <p>Kiwi importado, mais doce que a versão verde e rico em vitamina C.</p>
-      </article>
-
-      <article>
-        <h3>Acelga Peça 300g - R$ 5,95</h3>
-        <img src="assets/img/verduras/acelga.png" alt="Acelga fresca" width="200">
-        <p>A acelga é rica em nutrientes, vitaminas e minerais, especialmente vitamina K e vitamina A. </p>
-
-      </article>
-      <article>
-        <h3>Couve-Flor 250g — R$ 12,99</h3>
-        <img src="assets/img/verduras/couve-flor.png" alt="Couve Flor fresca cortada em buquês" width="200">
-        <p>a Couve-Flor é uma ótima fonte de fibras, que auxiliam no bom funcionamento intestinal e ajudam a promover saciedade.</p>
-      </article>
+      <dl>
+        <dt>
+          <img src="assets/img/frutas/atemoia.png" title="Atemoias em uma tábua"  alt="Atemoia" width="200">
+          <strong>Atemoia 500 g — R$ 12,45</strong></dt>
+        <dd>Fruta híbrida de polpa doce e cremosa — ótima para sucos e sobremesas.</dd>
+          <hr size="0,5" noshade>
+        <dt><img src="assets/img/frutas/kiwi-gold.png" title="Kiwis Gold em uma travessa" alt="Kiwi Gold" width="200">
+          <strong>Kiwi Gold 600 g — R$ 32,70</strong></dt>
+        <dd>Kiwi importado, mais doce que a versão verde e riquíssimo em vitamina C.</dd>
+      </dl>
+      <hr size="0,5" noshade>
+      <dl>
+        <dt><img src="assets/img/verduras/acelga.png" title="Peça de Acelga" alt="Acelga" width="200">
+          <strong>Acelga Peça 300 g - R$ 5,95</strong></dt>
+        <dd>A acelga é rica em nutrientes, vitaminas e minerais, especialmente vitamina K e vitamina A.</dd>
+        <hr size="0,5" noshade>
+        <dt><img src="assets/img/verduras/couve-flor.png" title="Peça de Couve-Flor" alt="Couve-Flor" width="200">
+          <strong>Couve-Flor 250 g — R$ 12,99</strong></dt>
+        <dd>A Couve-Flor é uma ótima fonte de fibras, que auxiliam no bom funcionamento intestinal e ajudam a promover saciedade.</dd>
     </section>
-    <hr>
-    <br>
+    <hr size="2" noshade>
     <!-- ——— Alimentos Não-Perecíveis ——— -->
     <section>
-      <center><h2>Alimentos Não-Perecíveis</h2></center>
+      <h2 align="center">Alimentos Não-Perecíveis</h2>
 
-      <article>
-        <h3>Arroz Paganini 1 kg — R$ 28,49</h3>
-        <img src="assets/img/nao-pereciveis/arroz_paganini.png" alt="Caixa de arroz Paganini" width="200">
-        <p>Arroz italiano de grãos firmes, ideal para risotos e pratos especiais.</p>
-      </article>
-
-      <article>
-        <h3>Lentilha Bonduelle Preparada Lata 265g — R$ 18,69</h3>
-        <img src="assets/img/nao-pereciveis/lentilha.png" alt="Lata de lentilha em conserva Bonduelle" width="200">
-        <p>Lentilha tipo 1, rica em proteínas e fibras, pronta para sopas e saladas.</p>
-      </article>
+      <dl>
+        <dt>
+          <img src="assets/img/nao-pereciveis/arroz_paganini.png" title="Caixa de Arroz Paganini" alt="Arroz Paganini" width="200">
+          <strong>Arroz Paganini 1 kg — R$ 28,49</strong></dt>
+        <dd>Arroz italiano de grãos firmes, ideal para risotos e pratos especiais.</dd>
+        <hr size="0,5" noshade>
+        <dt><img src="assets/img/nao-pereciveis/lentilha.png" title="Lata de lentilha em conserva " alt="Lentilha Bonduelle" width="200">
+          <strong>Lentilha Bonduelle Preparada Lata 265 g — R$ 18,69</strong></dt>
+        <dd>Lentilha tipo 1, rica em proteínas e fibras, pronta para sopas e saladas.</dd>
+      </dl>
     </section>
-    <hr>
-    <br>
+    <hr size="2" noshade>
     <!-- ——— Higiene & Limpeza ——— -->
     <section>
-      <center><h2>Higiene & Limpeza</h2></center>
+      <h2 align="center">Higiene &amp; Limpeza</h2>
 
-      <article>
-        <h3>Lenço Umedecido Neve 192 un — R$ 28,39</h3>
-        <img src="assets/img/higiene/neve.png" alt="Pacote de lenços Neve" width="200">
-        <p>Lenços com toque de seda, dermatologicamente testados. Leve 4 pague 3.</p>
-      </article>
-
-      <article>
-        <h3>Curativo Band-Aid 40 un — R$ 15,59</h3>
-        <img src="assets/img/higiene/band-aid.jpg" alt="Caixa de Band-Aid" width="200">
-        <p>Curativos transparentes hipoalergênicos, protegem e aceleram a cicatrização.</p>
-      </article>
-
-      <article>
-        <h3>Álcool Zulu 1 L — R$ 12,99</h3>
-        <img src="assets/img/limpeza/alcool_zulu.jpg" alt="Frasco de álcool Zulu" width="200">
-        <p>Álcool tradicional 40° INPM para uso doméstico geral.</p>
-      </article>
-
-      <article>
-        <h3>Óleo de Peroba King 200ml — R$ 17,49</h3>
-        <img src="assets/img/limpeza/oleo_peroba.jpg" alt="Frasco de Óleo de Peroba" width="200">
-        <p>Lustra-móveis com fragrância lavanda para brilho imediato e proteção da madeira.</p>
-      </article>
+      <dl>
+        <dt>
+          <img src="assets/img/higiene/neve.png" title="Pacote 4 Neve Toque Da Seda" alt="Lenço Umedecido Neve" width="200">
+          <strong>Lenço Umedecido Neve 192 un — R$ 28,39</strong></dt>
+        <dd>Lenços com toque de seda, dermatologicamente testados. Leve 4 pague 3.</dd>
+        <hr size="0,5" noshade>
+        <dt><img src="assets/img/higiene/band-aid.jpg" title="Caixa Band-Aid 40 un" alt="Curativo Band-Aid" width="200">
+          <strong>Curativo Band-Aid 40 un — R$ 15,59</strong></dt>
+        <dd>Curativos transparentes hipoalergênicos, protegem e aceleram a cicatrização.</dd>
+        <hr size="0,5" noshade>
+        <dt><img src="assets/img/limpeza/alcool_zulu.jpg" title="Álcool Zulu 1L" alt="Álcool Zulu" width="200">
+          <strong>Álcool Zulu 1 L — R$ 12,99</strong></dt>
+        <dd>Álcool tradicional 40° INPM para uso doméstico geral.</dd>
+        <hr size="0,5" noshade>
+        <dt><img src="assets/img/limpeza/oleo_peroba.jpg" title="Óleo Peroba Lavanda 200ml" alt="Óleo de Peroba King" width="200">
+          <strong>Óleo de Peroba King 200 ml — R$ 17,49</strong></dt>
+        <dd>Lustra-móveis com fragrância lavanda para brilho imediato e proteção da madeira.</dd>
     </section>
-    <hr>
-    <br>
+    <hr size="2" noshade>
     <!-- ——— Serviços ——— -->
     <section>
-      <center><h2>Serviços</h2></center>
+      <h2 align="center">Serviços</h2>
 
       <article>
-        <h4>Retirada no local — <strong>Grátis</strong></h4>
+        <h3>Retirada no local — <strong>Grátis</strong></h3>
         <p>Compre online e retire em até 2 h no balcão de atendimento.</p>
       </article>
 
       <article>
-        <h4>Tele-entrega — R$ 9,90</h4>
+        <h3>Tele-entrega — R$ 9,90</h3>
         <p>Entregamos em até 2 h para bairros centrais de Campinas.</p>
       </article>
     </section>
@@ -127,10 +123,20 @@
 
   <!-- ===== Rodapé ===== -->
   <footer>
-    <hr>
-    <p>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</p>
-    <p>Contato: <a href="mailto:contato@minimercadogreger.com"
-      title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a></p>
+    <hr size="3" noshade>
+  <table width="100%" bgcolor="#d9e7ff" cellpadding="8">
+    <tr>
+    <td align="center">
+      <address>
+        Contato: <a href="mailto:contato@minimercadogreger.com"
+        title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a><br>
+        Rua Exemplo, 123 – Campinas-SP
+      </address>
+      <small>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</small>
+    </td>
+  </tr>
+</table>
+
   </footer>
 
 </body>

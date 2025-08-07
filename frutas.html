@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <title>MiniMercado Greger — Frutas & Verduras</title>
 </head>
 <body>
 
   <!-- ===== Header ===== -->
-  <header>
-    <center><h1>MiniMercado Greger - Frutas & Verduras</h1></center>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="frutas.html">Frutas & Verduras</a></li>
-        <li><a href="nao-pereciveis.html">Alimentos Não-Perecíveis</a></li>
-        <li><a href="higiene.html">Higiene & Limpeza</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-      </ul>
-    </nav>
-    <hr>
-  </header>
+<!-- a) Faixa de fundo usando <table> (bgcolor) -->
+<table width="100%" bgcolor="#d9e7ff" cellpadding="8">
+  <tr>
+    <!-- b) Logo ou título -->
+    <td width="30%" align="left">
+      <h1 style="margin:0;">MiniMercado Greger</h1>
+    </td>
+
+    <!-- c) Menu horizontal em células individuais -->
+    <td align="right">
+      <nav>
+        <a href="index.html">Início</a> |
+        <a href="frutas.html">Frutas &amp; Verduras</a> |
+        <a href="nao-pereciveis.html">Não-Perecíveis</a> |
+        <a href="higiene.html">Higiene &amp; Limpeza</a> |
+        <a href="servicos.html">Serviços</a>
+      </nav>
+    </td>
+  </tr>
+</table>
+
+<hr size="3" noshade>
 
   <!-- ===== Conteúdo principal ===== -->
   <main>
@@ -29,22 +39,22 @@
 
       <article>
         <h3>Atemoia 500g — R$ 12,45</h3>
-        <img src="assets/img/frutas/atemioa.png" alt="Atemoia fresca" width="200">
+        <img src="assets/img/frutas/atemoia.png" alt="Atemoia fresca" width="200">
         <p>Fruta híbrida de polpa doce e cremosa — ótima para sucos e sobremesas.</p>
       </article>
-
+      <hr size="0.5" noshade>
       <article>
         <h3>Kiwi Gold 600g — R$ 32,70</h3>
         <img src="assets/img/frutas/kiwi-gold.png" alt="Kiwi Gold cortado ao meio" width="200">
         <p>Kiwi importado, mais doce que a versão verde e rico em vitamina C.</p>
       </article>
-
+      <hr size="0.5" noshade>
       <article>
         <h3>Acelga Peça 300g - R$ 5,95</h3>
         <img src="assets/img/verduras/acelga.png" alt="Acelga fresca" width="200">
         <p>A acelga é rica em nutrientes, vitaminas e minerais, especialmente vitamina K e vitamina A. </p>
-
       </article>
+      <hr size="0.5" noshade>
       <article>
         <h3>Couve-Flor 250g — R$ 12,99</h3>
         <img src="assets/img/verduras/couve-flor.png" alt="Couve Flor fresca cortada em buquês" width="200">
@@ -55,10 +65,20 @@
 
   <!-- ===== Rodapé ===== -->
   <footer>
-    <hr>
-    <p>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</p>
-    <p>Contato: <a href="mailto:contato@minimercadogreger.com"
-      title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a></p>
+    <hr size="3" noshade>
+  <table width="100%" bgcolor="#d9e7ff" cellpadding="8">
+    <tr>
+    <td align="center">
+      <address>
+        Contato: <a href="mailto:contato@minimercadogreger.com"
+        title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a><br>
+        Rua Exemplo, 123 – Campinas-SP
+      </address>
+      <small>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</small>
+    </td>
+  </tr>
+</table>
+
   </footer>
 
 </body>
