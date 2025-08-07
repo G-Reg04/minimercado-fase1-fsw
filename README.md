@@ -10,7 +10,7 @@ O objetivo é estruturar o conteúdo (head, navegação, catálogo de produtos, 
 - **Rodapé** com informações de autoria, contato e navegação resumida.
 
 ## Como visualizar
-1. Acesse a versão publicada em **GitHub Pages**: `<URL-do-seu-Pages>`.  
+1. Acesse a versão publicada em **GitHub Pages**: `https://g-reg04.github.io/minimercado-fase1-fsw/`.  
 2. Ou clone o projeto e abra `index.html` no navegador de sua preferência.
 
 > **Observação:** Todo o código é puramente HTML semântico, respeitando boas práticas de acessibilidade e SEO básico.
@@ -24,10 +24,13 @@ O objetivo é estruturar o conteúdo (head, navegação, catálogo de produtos, 
 ├── higiene.html            # Subcatálogo higiene & limpeza
 ├── servicos.html           # Página de serviços
 └── assets/
+    ├── favicon.ico         # Ícone do site
     └── img/                # Imagens de produtos
         ├── frutas/
+        ├── verduras/
         ├── nao-pereciveis/
-        └── higiene/
+        ├── higiene/
+        └── limpeza/
 ```
 
 ## Licença
