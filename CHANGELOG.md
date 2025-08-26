@@ -1,0 +1,1 @@
+<!-- arquivo de registro de mudanças da fase 1 para a fase 2 -->
