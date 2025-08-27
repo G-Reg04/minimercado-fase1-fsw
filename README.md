@@ -104,4 +104,3 @@ minimercado-greger/          # Projeto completo do site
 
 ## Licença
 Uso acadêmico — consulte a disciplina para detalhes de copyright.
-
