@@ -1,146 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <title>MiniMercado Greger — Página Inicial</title>
-</head>
+    <!-- favicon: caminho relativo (funciona no GitHub Pages de projeto) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-<body>
+    <!-- Bootstrap CSS (primeiro) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
- <!-- ===== Header ===== -->
-<!-- a) Faixa de fundo usando <table> (bgcolor) -->
-<table width="100%" bgcolor="#d9e7ff" cellpadding="8">
-  <tr>
-    <!-- b) Logo ou título -->
-    <td width="30%" align="left">
-      <h1 style="margin:0;">MiniMercado Greger</h1>
-    </td>
+    <!-- Seu CSS depois (para sobrescrever o Bootstrap) -->
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- c) Menu horizontal em células individuais -->
-    <td align="right">
-      <nav>
-        <a href="index.html">Início</a> |
-        <a href="frutas.html">Frutas &amp; Verduras</a> |
-        <a href="nao-pereciveis.html">Não-Perecíveis</a> |
-        <a href="higiene.html">Higiene &amp; Limpeza</a> |
-        <a href="servicos.html">Serviços</a>
-      </nav>
-    </td>
-  </tr>
-</table>
+    <title>MiniMercado Greger — Página Inicial</title>
+  </head>
+  <body>
+    <!-- Skip link para acessibilidade -->
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
 
-<hr size="3" noshade>
+    <!-- Cabeçalho simples (navbar virá no próximo passo) -->
+    <header class="topbar">
+      <div class="container">
+        <p class="m-0 fw-semibold">MiniMercado Greger</p>
+      </div>
+    </header>
 
+    <!-- Conteúdo principal com destino do skip-link -->
+    <main id="conteudo-principal" tabindex="-1">
+      <section class="container py-4">
+        <h1 class="mb-3">Bem-vindo ao MiniMercado Greger</h1>
+        <p class="lead">Aqui você encontra qualidade, praticidade e atendimento rápido.</p>
+      </section>
 
-  <!-- ===== Conteúdo principal ===== -->
-  <main>
+      <!-- Exemplo de imagem já com alt descritivo -->
+      <section class="container pb-4">
+        <h2 class="h4 mb-3">Destaque da semana</h2>
+        <img class="img-fluid rounded" src="/assets/img/frutas/atemoia.png" alt="Foto de Atemoia" />
+      </section>
 
-    <!-- ——— Frutas & Verduras ——— -->
-    <section>
-      <h2 align="center">Frutas &amp; Verduras</h2>
+      <!-- Seções placeholders (você já tem páginas separadas; deixamos âncoras para o próximo passo) -->
+      <section class="container pb-5" id="contato">
+        <h2 class="h4 mb-3">Contato</h2>
+        <p>Endereço, telefone e horário de funcionamento.</p>
+      </section>
+    </main>
 
-      <dl>
-        <dt>
-          <img src="assets/img/frutas/atemoia.png" title="Atemoias em uma tábua"  alt="Atemoia" width="200">
-          <strong>Atemoia 500 g — R$ 12,45</strong></dt>
-        <dd>Fruta híbrida de polpa doce e cremosa — ótima para sucos e sobremesas.</dd>
-          <hr size="0.5" noshade>
-        <dt><img src="assets/img/frutas/kiwi-gold.png" title="Kiwis Gold em uma travessa" alt="Kiwi Gold" width="200">
-          <strong>Kiwi Gold 600 g — R$ 32,70</strong></dt>
-        <dd>Kiwi importado, mais doce que a versão verde e riquíssimo em vitamina C.</dd>
-      </dl>
-      <hr size="0.5" noshade>
-      <dl>
-        <dt><img src="assets/img/verduras/acelga.png" title="Peça de Acelga" alt="Acelga" width="200">
-          <strong>Acelga Peça 300 g - R$ 5,95</strong></dt>
-        <dd>A acelga é rica em nutrientes, vitaminas e minerais, especialmente vitamina K e vitamina A.</dd>
-        <hr size="0.5" noshade>
-        <dt><img src="assets/img/verduras/couve-flor.png" title="Peça de Couve-Flor" alt="Couve-Flor" width="200">
-          <strong>Couve-Flor 250 g — R$ 12,99</strong></dt>
-        <dd>A Couve-Flor é uma ótima fonte de fibras, que auxiliam no bom funcionamento intestinal e ajudam a promover saciedade.</dd>
-    </section>
-    <hr size="2" noshade>
-    <!-- ——— Alimentos Não-Perecíveis ——— -->
-    <section>
-      <h2 align="center">Alimentos Não-Perecíveis</h2>
+    <!-- Bootstrap JS bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-      <dl>
-        <dt>
-          <img src="assets/img/nao-pereciveis/arroz_paganini.png" title="Caixa de Arroz Paganini" alt="Arroz Paganini" width="200">
-          <strong>Arroz Paganini 1 kg — R$ 28,49</strong></dt>
-        <dd>Arroz italiano de grãos firmes, ideal para risotos e pratos especiais.</dd>
-        <hr size="0.5" noshade>
-        <dt><img src="assets/img/nao-pereciveis/lentilha.png" title="Lata de lentilha em conserva " alt="Lentilha Bonduelle" width="200">
-          <strong>Lentilha Bonduelle Preparada Lata 265 g — R$ 18,69</strong></dt>
-        <dd>Lentilha tipo 1, rica em proteínas e fibras, pronta para sopas e saladas.</dd>
-      </dl>
-    </section>
-    <hr size="2" noshade>
-    <!-- ——— Higiene & Limpeza ——— -->
-    <section>
-      <h2 align="center">Higiene &amp; Limpeza</h2>
-
-      <dl>
-        <dt>
-          <img src="assets/img/higiene/neve.png" title="Pacote 4 Neve Toque Da Seda" alt="Lenço Umedecido Neve" width="200">
-          <strong>Lenço Umedecido Neve 192 un — R$ 28,39</strong></dt>
-        <dd>Lenços com toque de seda, dermatologicamente testados. Leve 4 pague 3.</dd>
-        <hr size="0.5" noshade>
-        <dt><img src="assets/img/higiene/band-aid.jpg" title="Caixa Band-Aid 40 un" alt="Curativo Band-Aid" width="200">
-          <strong>Curativo Band-Aid 40 un — R$ 15,59</strong></dt>
-        <dd>Curativos transparentes hipoalergênicos, protegem e aceleram a cicatrização.</dd>
-        <hr size="0.5" noshade>
-        <dt><img src="assets/img/limpeza/alcool_zulu.jpg" title="Álcool Zulu 1L" alt="Álcool Zulu" width="200">
-          <strong>Álcool Zulu 1 L — R$ 12,99</strong></dt>
-        <dd>Álcool tradicional 40° INPM para uso doméstico geral.</dd>
-        <hr size="0.5" noshade>
-        <dt><img src="assets/img/limpeza/oleo_peroba.jpg" title="Óleo Peroba Lavanda 200ml" alt="Óleo de Peroba King" width="200">
-          <strong>Óleo de Peroba King 200 ml — R$ 17,49</strong></dt>
-        <dd>Lustra-móveis com fragrância lavanda para brilho imediato e proteção da madeira.</dd>
-    </section>
-    <hr size="2" noshade>
-    <!-- ——— Serviços ——— -->
-    <section>
-      <h2 align="center">Serviços</h2>
-
-      <article>
-        <h3>Retirada no local — <strong>Grátis</strong></h3>
-        <p>Compre online e retire em até 2 h no balcão de atendimento.</p>
-      </article>
-
-      <article>
-        <h3>Tele-entrega — R$ 9,90</h3>
-        <p>Entregamos em até 2 h para bairros centrais de Campinas.</p>
-      </article>
-    </section>
-
-
-  </main>
-
-
-  <!-- ===== Rodapé ===== -->
-  <footer>
-    <hr size="3" noshade>
-  <table width="100%" bgcolor="#d9e7ff" cellpadding="8">
-    <tr>
-    <td align="center">
-      <address>
-        Contato: <a href="mailto:contato@minimercadogreger.com"
-        title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a><br>
-        Rua Exemplo, 123 – Campinas-SP
-      </address>
-      <small>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</small>
-    </td>
-  </tr>
-</table>
-
-  </footer>
-
-</body>
-
+    <!-- link JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

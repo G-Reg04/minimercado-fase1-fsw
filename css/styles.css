@@ -1,1 +1,35 @@
 /*arquivo de estilização do site*/
+/* Paleta base (ajuste se quiser) */
+:root {
+  --topbar-bg: #f8f9fa;
+  --topbar-border: #e0e0e0;
+}
+
+/* Barra superior simples (placeholder até entrar a navbar) */
+.topbar {
+  background: var(--topbar-bg);
+  border-bottom: 1px solid var(--topbar-border);
+  padding: 0.5rem 0;
+}
+
+/* Skip link: visível no foco, oculto fora do foco (padrão de acessibilidade) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.skip-link:focus {
+  position: static;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background: #000;
+  color: #fff;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+
+/* Ajustes utilitários leves */
+img {
+  max-width: 50%;
+  height: auto;
+}
