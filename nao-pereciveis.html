@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <title>MiniMercado Greger — Alimentos Não-Perecíveis</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== Header ===== -->
-<!-- a) Faixa de fundo usando <table> (bgcolor) -->
-<table width="100%" bgcolor="#d9e7ff" cellpadding="8">
-  <tr>
-    <!-- b) Logo ou título -->
-    <td width="30%" align="left">
-      <h1 style="margin:0;">MiniMercado Greger</h1>
-    </td>
+    <!-- favicon: caminho relativo (funciona no GitHub Pages de projeto) -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
-    <!-- c) Menu horizontal em células individuais -->
-    <td align="right">
-      <nav>
-        <a href="index.html">Início</a> |
-        <a href="frutas.html">Frutas &amp; Verduras</a> |
-        <a href="nao-pereciveis.html">Não-Perecíveis</a> |
-        <a href="higiene.html">Higiene &amp; Limpeza</a> |
-        <a href="servicos.html">Serviços</a>
+    <!-- Bootstrap CSS (primeiro) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- link para CSS -->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>MiniMercado Greger — Não Perecíveis</title>
+  </head>
+  <body>
+    <!-- Skip link para acessibilidade -->
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
+
+    <!-- HEADER -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-light border-bottom"
+        role="navigation"
+        aria-label="Navegação principal"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="index.html">MiniMercado Greger</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav-principal"
+            aria-controls="nav-principal"
+            aria-expanded="false"
+            aria-label="Alternar navegação"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="frutas.html">Frutas &amp; Verduras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="higiene.html">Higiene &amp; Limpeza</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nao-pereciveis.html">Não Perecíveis</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </td>
-  </tr>
-</table>
+    </header>
 
-<hr size="3" noshade>
-
-  <!-- ===== Conteúdo principal ===== -->
-  <main>
-    <h2 align="center">Alimentos Não-Perecíveis</h2>
-    <article>
+    <!-- ===== Conteúdo principal ===== -->
+    <main id="conteudo-principal" tabindex="-1">
+      <h2 align="center">Alimentos Não-Perecíveis</h2>
+      <article>
         <h3>Arroz Paganini 1 kg — R$ 28,49</h3>
-        <img src="assets/img/nao-pereciveis/arroz_paganini.png" alt="Caixa de arroz Paganini" width="200">
+        <img
+          src="assets/img/nao-pereciveis/arroz_paganini.png"
+          alt="Caixa de arroz Paganini"
+          width="200"
+        />
         <p>Arroz italiano de grãos firmes, ideal para risotos e pratos especiais.</p>
       </article>
-      <hr size="0.5" noshade>
+      <hr size="0.5" noshade />
       <article>
         <h3>Lentilha Bonduelle Preparada Lata 265g — R$ 18,69</h3>
-        <img src="assets/img/nao-pereciveis/lentilha.png" alt="Lata de lentilha em conserva Bonduelle" width="200">
+        <img
+          src="assets/img/nao-pereciveis/lentilha.png"
+          alt="Lata de lentilha em conserva Bonduelle"
+          width="200"
+        />
         <p>Lentilha tipo 1, rica em proteínas e fibras, pronta para sopas e saladas.</p>
       </article>
-  </main>
+    </main>
 
-  <!-- ===== Rodapé ===== -->
-  <footer>
-    <hr size="3" noshade>
-  <table width="100%" bgcolor="#d9e7ff" cellpadding="8">
-    <tr>
-    <td align="center">
-      <address>
-        Contato: <a href="mailto:contato@minimercadogreger.com"
-        title="EMAIL FICTÍCIO">contato@minimercadogreger.com</a><br>
-        Rua Exemplo, 123 – Campinas-SP
-      </address>
-      <small>&copy; 2025 Renato Greger — Projeto Fase 1 • Fundamentos de Sistemas Web</small>
-    </td>
-  </tr>
-</table>
+    <!-- FOOTER -->
+    <footer class="border-top mt-5 py-4">
+      <div class="container small">
+        <div class="row g-3 align-items-center">
+          <div class="col-12 col-md">
+            <strong>MiniMercado Greger</strong>
+          </div>
+          <div class="col-12 col-md">
+            <address class="mb-0">
+              Contato:
+              <a href="mailto:contato@minimercadogreger.com" title="EMAIL FICTÍCIO">
+                contato@minimercadogreger.com </a
+              ><br />
+              Rua Exemplo, 123 – Campinas-SP
+            </address>
+          </div>
+          <div class="col-12 col-md text-md-end">
+            <span>&copy; 2025 Renato Greger — Projeto FSW</span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
+    <!-- link JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

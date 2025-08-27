@@ -1,4 +1,5 @@
 /*arquivo de estilização do site*/
+
 /* Paleta base (ajuste se quiser) */
 :root {
   --topbar-bg: #f8f9fa;
@@ -26,10 +27,11 @@
   color: #fff;
   border-radius: 0.25rem;
   margin: 0.5rem;
+  z-index: 1000;
 }
 
-/* Ajustes utilitários leves */
+/* Garantir imagens responsivas caso use <img> fora do Bootstrap */
 img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
 }
