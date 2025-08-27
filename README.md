@@ -40,7 +40,7 @@ minimercado-greger/          # Projeto completo do site
 │
 ├─ README.md                 # Documentação do projeto (instruções, requisitos, links)
 └─ CHANGELOG.md              # Registro de alterações por versão
-
+```
 ---
 
 ## 🧰 Tecnologias e decisões
