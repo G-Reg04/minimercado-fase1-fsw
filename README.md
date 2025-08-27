@@ -1,37 +1,104 @@
-# MiniMercado Greger — Fase 1 • Fundamentos de Sistemas Web
+# MiniMercado Greger — Fase 2 (Fundamentos de Sistemas Web)
 
-Este repositório contém a **versão estática em HTML5** do site MiniMercado Greger, criada como parte da **Fase 1 do Projeto da disciplina Fundamentos de Sistemas Web (PUCRS Online)**.  
-O objetivo é estruturar o conteúdo (head, navegação, catálogo de produtos, serviços e rodapé) **sem uso de CSS ou JavaScript**, preparando o terreno para estilização e funcionalidades dinâmicas na próxima etapa.
+**Site (GitHub Pages):**  
+https://g-reg04.github.io/minimercado-fase1-fsw/index.html
 
-## Funcionalidades entregues
-- **Cabeçalho** com logotipo e links de navegação entre páginas internas.  
-- **Catálogo** com 2 produtos por categoria (frutas & verduras, alimentos não-perecíveis, higiene/limpeza) — imagem, descrição e preço.  
-- **Serviços** oferecidos (Retirada gratuita e Tele-entrega R$ 9,90).  
-- **Rodapé** com informações de autoria, contato e navegação resumida.
+**Repositório:**  
+https://github.com/G-Reg04/minimercado-fase1-fsw
 
-## Como visualizar
-1. Acesse a versão publicada em **GitHub Pages**: `https://g-reg04.github.io/minimercado-fase1-fsw/`.  
-2. Ou clone o projeto e abra `index.html` no navegador de sua preferência.
+Projeto acadêmico de um minimercado com **HTML + CSS/Bootstrap 5.3 + JavaScript (ES6)**.  
+Nesta Fase 2 o foco foi **tornar o site atrativo e dinâmico**, criar o **formulário de cadastro** com **agendamento** e **aprimorar acessibilidade**.
 
-> **Observação:** Todo o código é puramente HTML semântico, respeitando boas práticas de acessibilidade e SEO básico.
+---
 
-## Estrutura de pastas
-```
-📁 minimercado-greger/
-├── index.html              # Página inicial + catálogo
-├── frutas.html             # Subcatálogo frutas & verduras
-├── nao-pereciveis.html     # Subcatálogo alimentos não-perecíveis
-├── higiene.html            # Subcatálogo higiene & limpeza
-├── servicos.html           # Página de serviços
-└── assets/
-    ├── favicon.ico         # Ícone do site
-    └── img/                # Imagens de produtos
-        ├── frutas/
-        ├── verduras/
-        ├── nao-pereciveis/
-        ├── higiene/
-        └── limpeza/
-```
+## 📂 Estrutura de pastas
 
-## Licença
-Uso acadêmico — consulte a disciplina para detalhes de copyright.
+```plaintext
+minimercado-greger/          # Projeto completo do site
+
+├─ index.html                # Página inicial (carrossel + catálogo + formulário + agendamentos recentes)
+├─ frutas.html               # Subcatálogo Frutas & Verduras
+├─ higiene.html              # Subcatálogo Higiene & Limpeza
+├─ nao-pereciveis.html       # Subcatálogo Alimentos Não Perecíveis
+├─ servicos.html             # Página de serviços (Retirada / Tele-entrega)
+├─ agendamentos.html         # Nova página (gestão completa dos agendamentos via localStorage)
+│
+├─ css/
+│  └─ styles.css             # Paleta, fontes, ajustes de Bootstrap, responsividade e acessibilidade
+│
+├─ js/
+│  └─ main.js                # Lógica JS: validação, horários, máscara CPF, cadastro, storage, listagens
+│
+├─ assets/
+│  ├─ favicon.ico            # Ícone do site
+│  └─ img/                   # Imagens de produtos
+│     ├─ frutas/
+│     ├─ verduras/
+│     ├─ nao-pereciveis/
+│     ├─ higiene/
+│     └─ limpeza/
+│
+├─ README.md                 # Documentação do projeto (instruções, requisitos, links)
+└─ CHANGELOG.md              # Registro de alterações por versão
+
+---
+
+## 🧰 Tecnologias e decisões
+
+- **Bootstrap 5.3 (CDN)**: grid responsivo, componentes (navbar, cards, carousel, accordion, toasts).
+- **JavaScript puro (ES6)**, sem bibliotecas adicionais.
+- **Tema próprio** no `styles.css`:
+  - **Paleta Coolors**: Antiflash White, YInMn Blue, Air Superiority Blue, Uranian Blue, Battleship Gray.
+  - **Tipografia (Google Fonts)**: *Poppins* (títulos), *Nunito Sans* (subtítulos), *Inter* (texto).
+  - Mapeamento para variáveis do Bootstrap (`--bs-primary`, `--bs-tertiary-bg`, links, etc.).
+- **Acessibilidade**: *skip link*, `alt` em imagens, contraste, navegação por teclado, rótulos de formulário, mensagens com `aria-live`.
+
+---
+
+## ✅ O que foi implementado na Fase 2
+
+### UI/Design
+- Carrossel (Bootstrap) com **tamanho consistente** e legenda **legível**.
+- **Footer compacto** e padrão visual da marca aplicado ao site todo.
+- Páginas de catálogo reconstruídas com **cards** e **grid responsivo**.
+
+### JavaScript (dinâmica do site)
+- **Status de funcionamento** “Aberto agora / Fechado” por **dia/horário**.
+- **Agendamento** com:
+  - **Data mínima** = hoje,
+  - **janela de atendimento** (Seg–Sáb 09:00–20:00; Dom 10:00–16:00),
+  - **antecedência mínima** de 2 horas,
+  - passo de 15 min.
+- **Serviço** (Retirada / Tele-entrega): alterna exibição e **obrigatoriedade** dos campos de **endereço**.
+- **Máscara simples de CPF** no input.
+- **Validação HTML5 + Bootstrap** com **Toast de sucesso**.
+- **Persistência** no **`localStorage`**: salva agendamentos do formulário.
+- **Lista de agendamentos recentes** logo abaixo do formulário (com **Exportar JSON** e **Limpar**).
+- **Gestão completa** em `agendamentos.html`: **buscar**, **filtrar por serviço e data**, **ordenar por data/hora**, **excluir item**, **apagar tudo**, **exportar/importar JSON**.
+- **Navbar** marca automaticamente o **item ativo** em todas as páginas.
+
+### Acessibilidade
+- **Skip link** “Ir para o conteúdo”.
+- `alt` descritivo nas imagens.
+- Legenda do carrossel com **fundo claro** e texto de **alto contraste**.
+- `aria-live` nas mensagens dinâmicas (status/validação/toast/lista).
+- Foco visível, sem dependência de mouse.
+
+---
+
+## 🧪 Como testar localmente
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/G-Reg04/minimercado-projeto-fsw
+   cd minimercado-projeto-fsw
+
+2. Abra index.html no navegador (ou use a extensão Live Server do VS Code).
+
+3. Teste:
+    - Carrossel e navegação.
+    - Formulário (campos obrigatórios, máscara, data/hora válidas).
+    - Toast de sucesso e lista de agendamentos.
+    - Página agendamentos.html para filtrar/gerenciar.
+    - Os dados ficam somente no navegador (não há back-end). Para “resetar”, use o botão Limpar lista ou apague localStorage do site.
+
