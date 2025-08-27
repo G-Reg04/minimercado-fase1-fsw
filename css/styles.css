@@ -1,4 +1,131 @@
-/* ===== Acessibilidade ===== */
+/* ----- Google Fonts (via @import, sem alterar o HTML) ----- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:wght@500;600&family=Poppins:wght@600;700;800&display=swap');
+
+/* ---------- Paleta ---------- */
+:root {
+  /* HEX base */
+  --antiflash-white: #e7ecef;
+  --yinmn-blue: #274c77;
+  --air-superiority-blue: #6096ba;
+  --uranian-blue: #a3cef1;
+  --battleship-gray: #8b8c89;
+
+  /* Tipografia (famílias e pesos) */
+  --ff-heading: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue',
+    Arial, sans-serif;
+  --ff-subtitle: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue',
+    Arial, sans-serif;
+  --ff-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+
+  --fw-h-strong: 700; /* títulos principais */
+  --fw-h: 600; /* h2/h3 etc. */
+  --fw-subtitle: 600; /* subtítulos/destaques */
+  --fw-body: 400; /* texto */
+  --ls-tight: -0.01em;
+
+  /* ---------- Mapeamento para Bootstrap 5.3 ---------- */
+  --bs-primary: var(--yinmn-blue);
+  --bs-primary-rgb: 39, 76, 119;
+
+  --bs-secondary: var(--battleship-gray);
+  --bs-secondary-rgb: 139, 140, 137;
+
+  --bs-info: var(--air-superiority-blue);
+  --bs-info-rgb: 96, 150, 186;
+
+  --bs-light: var(--antiflash-white);
+  --bs-light-rgb: 231, 236, 239;
+
+  --bs-tertiary-bg: var(--antiflash-white);
+
+  --bs-link-color: var(--yinmn-blue);
+  --bs-link-hover-color: #1f3a5c;
+}
+
+/* ---------- Base tipográfica ---------- */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-h-strong);
+  letter-spacing: var(--ls-tight);
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-h);
+  letter-spacing: var(--ls-tight);
+}
+.lead,
+.card-title,
+.carousel-caption h5,
+.section-subtitle {
+  font-family: var(--ff-subtitle);
+  font-weight: var(--fw-subtitle);
+}
+
+/* ---------- Utilitários de marca ---------- */
+.bg-brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--yinmn-blue),
+    var(--air-superiority-blue),
+    var(--uranian-blue)
+  );
+  color: #fff;
+}
+.text-brand {
+  color: var(--yinmn-blue) !important;
+}
+.border-brand {
+  border-color: var(--yinmn-blue) !important;
+}
+.bg-brand {
+  background-color: var(--yinmn-blue) !important;
+  color: #fff !important;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  --bs-navbar-color: #2a3b52;
+  --bs-navbar-hover-color: var(--yinmn-blue);
+  --bs-navbar-brand-color: var(--yinmn-blue);
+  --bs-navbar-brand-hover-color: #1f3a5c;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(39,76,119,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-brand {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-h);
+  letter-spacing: var(--ls-tight);
+}
+
+/* ---------- Carrossel ---------- */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--yinmn-blue);
+}
+.carousel-caption {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Acessibilidade ---------- */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -14,18 +141,63 @@
   margin: 0.5rem;
 }
 
-/* Imagens sempre responsivas caso use <img> fora de componentes Bootstrap */
+/* ---------- Base responsiva ---------- */
 img {
   max-width: 100%;
   height: auto;
 }
-
-/* Ajuste leve nas captions do carrossel para legibilidade */
-.carousel-caption {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-}
-
-/* Espaços padrão das seções (quando não estiverem usando utilitários Bootstrap) */
 section {
   scroll-margin-top: 80px;
+}
+
+/* ===== Ajustes do carrossel: tamanho consistente + legenda legível ===== */
+
+/* 1) Todos os slides com a MESMA área, independente da imagem */
+#carrossel .carousel-item {
+  aspect-ratio: 16 / 9;
+}
+@media (min-width: 992px) {
+  #carrossel .carousel-item {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* A imagem preenche o slide sem deformar; corta as sobras se necessário */
+#carrossel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 2) Legendas com texto ESCURO e fundo claro semi-transparente */
+#carrossel .carousel-caption {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: 1rem;
+
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+
+  /* fundo claro translúcido (fallback + color-mix moderno) */
+  background: rgba(231, 236, 239, 0.92); /* antiflash-white ~ 92% */
+  background: color-mix(in srgb, var(--antiflash-white) 92%, transparent);
+
+  /* texto escuro usando a cor da marca */
+  color: var(--yinmn-blue);
+  text-shadow: none;
+}
+
+/* Garante a cor escura nos títulos e descrições da legenda */
+#carrossel .carousel-caption h5,
+#carrossel .carousel-caption p {
+  color: var(--yinmn-blue);
+  margin-bottom: 0.25rem;
+}
+
+/* Indicadores mantêm a cor da marca */
+#carrossel .carousel-indicators [data-bs-target] {
+  background-color: var(--yinmn-blue);
 }
