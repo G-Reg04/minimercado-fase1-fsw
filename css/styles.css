@@ -201,3 +201,47 @@ section {
 #carrossel .carousel-indicators [data-bs-target] {
   background-color: var(--yinmn-blue);
 }
+
+/* ===== Footer compacto ===== */
+.site-footer {
+  background: var(--antiflash-white);
+  border-top: 1px solid color-mix(in srgb, var(--yinmn-blue) 12%, transparent);
+
+  /* altura enxuta */
+  padding-block: 0.75rem;
+  margin-top: 2rem;
+
+  font-size: 0.9rem;
+  color: #1f2a3a;
+}
+
+/* reduz o espaço vertical entre colunas do grid do footer */
+.site-footer .row {
+  --bs-gutter-y: 0.25rem;
+}
+
+/* links no footer: mesma cor do texto, com hover discreto */
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+.site-footer a:hover {
+  color: var(--yinmn-blue);
+  text-decoration-color: currentColor;
+}
+
+/* alinhamentos agradáveis em telas pequenas */
+@media (max-width: 767.98px) {
+  .site-footer .text-md-end {
+    text-align: left !important;
+  }
+}
+/* utilitário para borda tracejada usado em "Em breve" */
+.border-dashed {
+  border: 2px dashed color-mix(in srgb, var(--yinmn-blue) 20%, transparent);
+}
+/* fallback se o Bootstrap da hospedagem não tiver object-fit utilities */
+.object-fit-cover {
+  object-fit: cover;
+}

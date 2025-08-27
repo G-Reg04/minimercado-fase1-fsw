@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- favicon: caminho relativo (funciona no GitHub Pages de projeto) -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Favicon (caminho relativo para GitHub Pages de projeto) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <!-- Bootstrap CSS (primeiro) -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
 
-    <!-- link para CSS -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- CSS autoral -->
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title>MiniMercado Greger — Frutas &amp; Verduras</title>
   </head>
   <body>
-    <!-- Skip link para acessibilidade -->
+    <!-- Skip link -->
     <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
 
     <!-- HEADER -->
     <header>
       <nav
-        class="navbar navbar-expand-lg bg-light border-bottom"
+        class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
         role="navigation"
         aria-label="Navegação principal"
       >
@@ -58,6 +60,9 @@
                 <a class="nav-link" href="nao-pereciveis.html">Não Perecíveis</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="agendamentos.html">Agendamentos</a>
+              </li>
               <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
             </ul>
           </div>
@@ -65,49 +70,114 @@
       </nav>
     </header>
 
-    <!-- ===== Conteúdo principal ===== -->
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main id="conteudo-principal" tabindex="-1">
-      <section>
-        <center><h2>Frutas & Verduras</h2></center>
+      <section class="container py-4">
+        <h1 class="mb-3">Frutas &amp; Verduras</h1>
+        <p class="lead section-subtitle mb-4">Seleção fresca com ótimos preços.</p>
 
-        <article>
-          <h3>Atemoia 500g — R$ 12,45</h3>
-          <img src="assets/img/frutas/atemoia.png" alt="Atemoia fresca" width="200" />
-          <p>Fruta híbrida de polpa doce e cremosa — ótima para sucos e sobremesas.</p>
-        </article>
-        <hr size="0.5" noshade />
-        <article>
-          <h3>Kiwi Gold 600g — R$ 32,70</h3>
-          <img src="assets/img/frutas/kiwi-gold.png" alt="Kiwi Gold cortado ao meio" width="200" />
-          <p>Kiwi importado, mais doce que a versão verde e rico em vitamina C.</p>
-        </article>
-        <hr size="0.5" noshade />
-        <article>
-          <h3>Acelga Peça 300g - R$ 5,95</h3>
-          <img src="assets/img/verduras/acelga.png" alt="Acelga fresca" width="200" />
-          <p>
-            A acelga é rica em nutrientes, vitaminas e minerais, especialmente vitamina K e vitamina
-            A.
-          </p>
-        </article>
-        <hr size="0.5" noshade />
-        <article>
-          <h3>Couve-Flor 250g — R$ 12,99</h3>
-          <img
-            src="assets/img/verduras/couve-flor.png"
-            alt="Couve Flor fresca cortada em buquês"
-            width="200"
-          />
-          <p>
-            A Couve-Flor é uma ótima fonte de fibras, que auxiliam no bom funcionamento intestinal e
-            ajudam a promover saciedade.
-          </p>
-        </article>
+        <div class="row g-4">
+          <!-- Atemoia -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-4x3">
+                <img
+                  src="assets/img/frutas/atemoia.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Atemoias frescas sobre tábua de madeira"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Atemoia 500 g</h3>
+                <p class="card-text small text-muted mb-2">
+                  Polpa doce e cremosa, ótima para sucos e sobremesas.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-brand">R$ 12,45</span>
+                  <a class="btn btn-sm btn-primary" href="index.html#cadastro">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kiwi Gold -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-4x3">
+                <img
+                  src="assets/img/frutas/kiwi-gold.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Kiwi Gold cortado ao meio em travessa"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Kiwi Gold 600 g</h3>
+                <p class="card-text small text-muted mb-2">
+                  Mais doce que o verde e riquíssimo em vitamina C.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-brand">R$ 32,70</span>
+                  <a class="btn btn-sm btn-primary" href="index.html#cadastro">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Acelga -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-4x3">
+                <img
+                  src="assets/img/verduras/acelga.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Peça de acelga fresca"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Acelga Peça 300 g</h3>
+                <p class="card-text small text-muted mb-2">
+                  Rica em vitaminas A e K, ótima para refogados.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-brand">R$ 5,95</span>
+                  <a class="btn btn-sm btn-primary" href="index.html#cadastro">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Couve-Flor -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-4x3">
+                <img
+                  src="assets/img/verduras/couve-flor.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Couve-flor fresca cortada em buquês"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Couve-Flor 250 g</h3>
+                <p class="card-text small text-muted mb-2">
+                  Fonte de fibras, ajuda na saciedade e no bem-estar.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-brand">R$ 12,99</span>
+                  <a class="btn btn-sm btn-primary" href="index.html#cadastro">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-top mt-5 py-4">
+    <footer class="site-footer border-top">
       <div class="container small">
         <div class="row g-3 align-items-center">
           <div class="col-12 col-md">
@@ -130,9 +200,13 @@
     </footer>
 
     <!-- Bootstrap JS bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- link JavaScript -->
+    <!-- JS autoral -->
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- favicon: caminho relativo (funciona no GitHub Pages de projeto) -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Favicon (caminho relativo para GitHub Pages de projeto) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <!-- Bootstrap CSS (primeiro) -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
 
-    <!-- link para CSS -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- CSS autoral -->
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title>MiniMercado Greger — Não Perecíveis</title>
   </head>
   <body>
-    <!-- Skip link para acessibilidade -->
+    <!-- Skip link -->
     <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
 
     <!-- HEADER -->
     <header>
       <nav
-        class="navbar navbar-expand-lg bg-light border-bottom"
+        class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
         role="navigation"
         aria-label="Navegação principal"
       >
@@ -58,6 +60,9 @@
                 <a class="nav-link" href="nao-pereciveis.html">Não Perecíveis</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="agendamentos.html">Agendamentos</a>
+              </li>
               <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
             </ul>
           </div>
@@ -65,32 +70,78 @@
       </nav>
     </header>
 
-    <!-- ===== Conteúdo principal ===== -->
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main id="conteudo-principal" tabindex="-1">
-      <h2 align="center">Alimentos Não-Perecíveis</h2>
-      <article>
-        <h3>Arroz Paganini 1 kg — R$ 28,49</h3>
-        <img
-          src="assets/img/nao-pereciveis/arroz_paganini.png"
-          alt="Caixa de arroz Paganini"
-          width="200"
-        />
-        <p>Arroz italiano de grãos firmes, ideal para risotos e pratos especiais.</p>
-      </article>
-      <hr size="0.5" noshade />
-      <article>
-        <h3>Lentilha Bonduelle Preparada Lata 265g — R$ 18,69</h3>
-        <img
-          src="assets/img/nao-pereciveis/lentilha.png"
-          alt="Lata de lentilha em conserva Bonduelle"
-          width="200"
-        />
-        <p>Lentilha tipo 1, rica em proteínas e fibras, pronta para sopas e saladas.</p>
-      </article>
+      <section class="container py-4">
+        <h1 class="mb-3">Não Perecíveis</h1>
+        <p class="lead section-subtitle mb-4">Opções práticas e duráveis para a sua despensa.</p>
+
+        <div class="row g-4">
+          <!-- Arroz Paganini -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-4x3">
+                <img
+                  src="assets/img/nao-pereciveis/arroz_paganini.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Caixa de arroz importado Paganini Arborio"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Arroz Paganini 1 kg</h3>
+                <p class="card-text small text-muted mb-2">
+                  Grãos firmes, ideal para risotos e pratos especiais.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-brand">R$ 28,49</span>
+                  <a class="btn btn-sm btn-primary" href="index.html#cadastro">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lentilha Bonduelle -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-4x3">
+                <img
+                  src="assets/img/nao-pereciveis/lentilha.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Lata de lentilha Bonduelle preparada"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Lentilha Bonduelle 265 g</h3>
+                <p class="card-text small text-muted mb-2">
+                  Rica em proteínas e fibras, pronta para sopas e saladas.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-brand">R$ 18,69</span>
+                  <a class="btn btn-sm btn-primary" href="index.html#cadastro">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Espaço reservado para mais itens futuramente -->
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div
+              class="card h-100 w-100 border-dashed text-center align-items-center justify-content-center p-4"
+            >
+              <div>
+                <p class="text-muted mb-1">Em breve</p>
+                <p class="small text-muted">Mais itens não perecíveis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="border-top mt-5 py-4">
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="site-footer border-top">
       <div class="container small">
         <div class="row g-3 align-items-center">
           <div class="col-12 col-md">
@@ -99,8 +150,8 @@
           <div class="col-12 col-md">
             <address class="mb-0">
               Contato:
-              <a href="mailto:contato@minimercadogreger.com" title="EMAIL FICTÍCIO">
-                contato@minimercadogreger.com </a
+              <a href="mailto:contato@minimercadogreger.com" title="EMAIL FICTÍCIO"
+                >contato@minimercadogreger.com</a
               ><br />
               Rua Exemplo, 123 – Campinas-SP
             </address>
@@ -113,9 +164,13 @@
     </footer>
 
     <!-- Bootstrap JS bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- link JavaScript -->
+    <!-- JS autoral -->
     <script src="js/main.js"></script>
   </body>
 </html>
