@@ -1,10 +1,10 @@
 # MiniMercado Greger — Fase 2 (Fundamentos de Sistemas Web)
 
 **Site (GitHub Pages):**  
-https://g-reg04.github.io/minimercado-fase1-fsw/index.html
+https://g-reg04.github.io/minimercado-projeto-fsw/index.html
 
 **Repositório:**  
-https://github.com/G-Reg04/minimercado-fase1-fsw
+https://github.com/G-Reg04/minimercado-projeto-fsw
 
 Projeto acadêmico de um minimercado com **HTML + CSS/Bootstrap 5.3 + JavaScript (ES6)**.  
 Nesta Fase 2 o foco foi **tornar o site atrativo e dinâmico**, criar o **formulário de cadastro** com **agendamento** e **aprimorar acessibilidade**.
@@ -40,7 +40,7 @@ minimercado-greger/          # Projeto completo do site
 │
 ├─ README.md                 # Documentação do projeto (instruções, requisitos, links)
 └─ CHANGELOG.md              # Registro de alterações por versão
-
+```
 ---
 
 ## 🧰 Tecnologias e decisões
@@ -101,4 +101,7 @@ minimercado-greger/          # Projeto completo do site
     - Toast de sucesso e lista de agendamentos.
     - Página agendamentos.html para filtrar/gerenciar.
     - Os dados ficam somente no navegador (não há back-end). Para “resetar”, use o botão Limpar lista ou apague localStorage do site.
+
+## Licença
+Uso acadêmico — consulte a disciplina para detalhes de copyright.
 
